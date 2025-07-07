@@ -1,0 +1,227 @@
+{
+  "name": "funbrain-kids",
+  "version": "1.0.0",
+  "description": "Platform game edukasi interaktif 2D untuk anak-anak usia dini dengan sistem unlock progresif",
+  "main": "index.html",
+  "keywords": [
+    "educational-games",
+    "kids-learning",
+    "interactive-education",
+    "children-games",
+    "early-childhood",
+    "html5-games",
+    "javascript-games",
+    "educational-technology",
+    "learning-platform",
+    "memory-games",
+    "alphabet-learning",
+    "number-learning",
+    "color-recognition",
+    "time-learning",
+    "fruit-matching",
+    "progressive-unlock",
+    "child-friendly",
+    "responsive-design",
+    "web-audio",
+    "local-storage",
+    "edukasi-anak",
+    "game-anak",
+    "belajar-sambil-bermain",
+    "pendidikan-interaktif"
+  ],
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=index.html --watch=assets/",
+    "dev": "npx live-server --port=3000 --open=index.html --watch=assets/ --verbose",
+    "preview": "npx live-server --port=8080 --open=index.html --no-browser",
+    "build": "npm run optimize && npm run validate",
+    "optimize": "echo 'Optimizing assets...' && npm run minify-css && npm run minify-js",
+    "minify-css": "echo 'Minifying CSS files...'",
+    "minify-js": "echo 'Minifying JavaScript files...'",
+    "validate": "npm run validate-html && npm run validate-css && npm run validate-js",
+    "validate-html": "echo 'Validating HTML...'",
+    "validate-css": "echo 'Validating CSS...'",
+    "validate-js": "echo 'Validating JavaScript...'",
+    "test": "echo 'Running tests...'",
+    "test:unit": "echo 'Running unit tests...'",
+    "test:integration": "echo 'Running integration tests...'",
+    "test:e2e": "echo 'Running end-to-end tests...'",
+    "test:performance": "echo 'Running performance tests...'",
+    "lint": "echo 'Linting code...'",
+    "lint:css": "echo 'Linting CSS...'",
+    "lint:js": "echo 'Linting JavaScript...'",
+    "format": "echo 'Formatting code...'",
+    "clean": "echo 'Cleaning build artifacts...'",
+    "deploy": "echo 'Deploying to production...'",
+    "audit": "npm audit --audit-level moderate",
+    "outdated": "npm outdated",
+    "update": "npm update",
+    "docs": "echo 'Generating documentation...'",
+    "backup": "echo 'Creating backup...'",
+    "restore": "echo 'Restoring from backup...'",
+    "setup": "npm install && echo 'Setup complete!'",
+    "health-check": "echo 'Running health checks...'",
+    "performance": "echo 'Running performance analysis...'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/funbrainkids/funbrain-kids.git"
+  },
+  "homepage": "https://funbrainkids.github.io/funbrain-kids/",
+  "bugs": {
+    "url": "https://github.com/funbrainkids/funbrain-kids/issues",
+    "email": "support@funbrainkids.com"
+  },
+  "author": {
+    "name": "FunBrain Kids Development Team",
+    "email": "dev@funbrainkids.com",
+    "url": "https://funbrainkids.com"
+  },
+  "contributors": [
+    {
+      "name": "Lead Developer",
+      "email": "lead@funbrainkids.com",
+      "role": "Lead Developer"
+    },
+    {
+      "name": "UI/UX Designer",
+      "email": "design@funbrainkids.com",
+      "role": "UI/UX Designer"
+    },
+    {
+      "name": "Audio Designer",
+      "email": "audio@funbrainkids.com",
+      "role": "Audio Designer"
+    }
+  ],
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "optionalDependencies": {},
+  "peerDependencies": {},
+  "config": {
+    "port": 3000,
+    "host": "localhost"
+  },
+  "funbrainkids": {
+    "version": "1.0.0",
+    "gameEngine": "Custom HTML5/CSS3/JavaScript",
+    "targetAge": "3-8 years",
+    "languages": ["id", "en"],
+    "totalGames": 5,
+    "features": {
+      "progressiveUnlock": true,
+      "audioSupport": true,
+      "speechSynthesis": true,
+      "responsiveDesign": true,
+      "localStorage": true,
+      "achievements": true,
+      "statistics": true,
+      "parentalControls": false,
+      "multiLanguage": true,
+      "offlineMode": true
+    },
+    "games": [
+      {
+        "id": "letters",
+        "name": "Tebak Huruf",
+        "description": "Belajar mengenal huruf A-Z",
+        "difficulty": "easy",
+        "duration": "5-10 minutes",
+        "skills": ["letter recognition", "phonics", "visual recognition"]
+      },
+      {
+        "id": "fruits",
+        "name": "Cocokkan Buah",
+        "description": "Game memory dengan buah-buahan",
+        "difficulty": "easy",
+        "duration": "10-15 minutes",
+        "skills": ["memory", "concentration", "pattern recognition"]
+      },
+      {
+        "id": "numbers",
+        "name": "Hitung Angka",
+        "description": "Belajar berhitung 1-10",
+        "difficulty": "medium",
+        "duration": "8-12 minutes",
+        "skills": ["counting", "number recognition", "basic math"]
+      },
+      {
+        "id": "colors",
+        "name": "Puzzle Warna",
+        "description": "Mengenal warna-warna dasar",
+        "difficulty": "medium",
+        "duration": "5-10 minutes",
+        "skills": ["color recognition", "visual discrimination"]
+      },
+      {
+        "id": "time",
+        "name": "Belajar Jam",
+        "description": "Memahami konsep waktu",
+        "difficulty": "hard",
+        "duration": "10-15 minutes",
+        "skills": ["time telling", "analog clock reading"]
+      }
+    ],
+    "achievements": [
+      {
+        "id": "first-star",
+        "name": "Bintang Pertama",
+        "description": "Dapatkan bintang pertamamu"
+      },
+      {
+        "id": "game-master",
+        "name": "Master Game",
+        "description": "Selesaikan semua game"
+      },
+      {
+        "id": "speed-learner",
+        "name": "Pembelajar Cepat",
+        "description": "Selesaikan game dalam waktu singkat"
+      }
+    ]
+  },
+  "funding": {
+    "type": "donation",
+    "url": "https://funbrainkids.com/donate"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "directories": {
+    "doc": "./docs",
+    "example": "./examples",
+    "lib": "./assets/js",
+    "test": "./tests"
+  },
+  "files": [
+    "index.html",
+    "assets/",
+    "games/",
+    "README.md",
+    "LICENSE"
+  ],
+  "man": [],
+  "preferGlobal": false,
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}

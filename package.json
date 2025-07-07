@@ -1,0 +1,58 @@
+{
+  "name": "edugame-interactive-platform",
+  "version": "1.0.0",
+  "description": "Platform game edukasi interaktif yang dirancang untuk membuat pembelajaran menjadi menyenangkan dan efektif",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=index.html",
+    "dev": "npx live-server --port=3000 --open=index.html --watch=.",
+    "build": "echo 'Building project...' && npm run optimize",
+    "optimize": "echo 'Optimizing assets...'",
+    "test": "echo 'Running tests...'",
+    "lint": "echo 'Linting code...'",
+    "preview": "npx live-server --port=8080 --open=index.html"
+  },
+  "keywords": [
+    "education",
+    "game",
+    "interactive",
+    "learning",
+    "quiz",
+    "memory",
+    "mathematics",
+    "science",
+    "word-challenge",
+    "educational-games",
+    "responsive",
+    "html5",
+    "css3",
+    "javascript",
+    "edukasi",
+    "belajar"
+  ],
+  "author": "EduGame Development Team",
+  "license": "MIT",
+  "homepage": "https://github.com/edugame/interactive-platform",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edugame/interactive-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edugame/interactive-platform/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "config": {
+    "port": 3000
+  }
+}

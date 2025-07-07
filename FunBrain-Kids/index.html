@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunBrain Kids - Game Edukasi Anak</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/games.css">
+    <link rel="stylesheet" href="assets/css/enhanced-animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="rainbow-circle">
+                <div class="rainbow-spinner"></div>
+            </div>
+            <h2 class="loading-text">FunBrain Kids</h2>
+            <p class="loading-subtitle">Memuat keseruan belajar...</p>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div class="particle-bg" id="particleBg"></div>
+
+    <!-- Main Container -->
+    <div id="mainContainer" class="main-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h1>FunBrain Kids</h1>
+                </div>
+                <div class="header-info">
+                    <div class="stars-earned">
+                        <i class="fas fa-star"></i>
+                        <span id="totalStars">0</span>
+                    </div>
+                    <div class="level-progress">
+                        <span>Level: </span>
+                        <span id="currentLevel">1</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <div class="welcome-text">
+                    <h2>Selamat Datang di FunBrain Kids! 🎉</h2>
+                    <p>Ayo belajar sambil bermain dengan game-game seru yang akan membuat kamu semakin pintar!</p>
+                    <div class="welcome-features">
+                        <div class="feature-item">
+                            <i class="fas fa-star"></i>
+                            <span>Kumpulkan bintang</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>Buka level baru</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Belajar dengan cinta</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="welcome-character">
+                    <div class="character-container">
+                        <div class="character-face">
+                            <div class="eyes">
+                                <div class="eye left"></div>
+                                <div class="eye right"></div>
+                            </div>
+                            <div class="mouth"></div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-star">⭐</div>
+                            <div class="floating-heart">❤️</div>
+                            <div class="floating-book">📚</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Grid -->
+        <section class="games-section">
+            <div class="section-header">
+                <h2>Pilih Game Favoritmu!</h2>
+                <p>Selesaikan satu game untuk membuka game berikutnya</p>
+            </div>
+            
+            <div class="games-grid">
+                <!-- Game 1: Tebak Huruf -->
+                <div class="game-card" data-game="letters" data-level="1">
+                    <div class="game-icon">
+                        <i class="fas fa-font"></i>
+                    </div>
+                    <div class="game-content">
+                        <h3>Tebak Huruf</h3>
+                        <p>Belajar mengenal huruf A-Z dengan cara yang menyenangkan!</p>
+                        <div class="game-stats">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="difficulty">Mudah</span>
+                        </div>
+                    </div>
+                    <div class="game-status unlocked">
+                        <i class="fas fa-play"></i>
+                        <span>Mulai</span>
+                    </div>
+                </div>
+
+                <!-- Game 2: Cocokkan Buah -->
+                <div class="game-card" data-game="fruits" data-level="2">
+                    <div class="game-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <div class="game-content">
+                        <h3>Cocokkan Buah</h3>
+                        <p>Temukan pasangan buah yang sama dan pelajari nama-namanya!</p>
+                        <div class="game-stats">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="difficulty">Mudah</span>
+                        </div>
+                    </div>
+                    <div class="game-status locked">
+                        <i class="fas fa-lock"></i>
+                        <span>Terkunci</span>
+                    </div>
+                </div>
+
+                <!-- Game 3: Hitung Angka -->
+                <div class="game-card" data-game="numbers" data-level="3">
+                    <div class="game-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="game-content">
+                        <h3>Hitung Angka</h3>
+                        <p>Belajar berhitung 1-10 dengan objek yang lucu dan menarik!</p>
+                        <div class="game-stats">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="difficulty">Sedang</span>
+                        </div>
+                    </div>
+                    <div class="game-status locked">
+                        <i class="fas fa-lock"></i>
+                        <span>Terkunci</span>
+                    </div>
+                </div>
+
+                <!-- Game 4: Puzzle Warna -->
+                <div class="game-card" data-game="colors" data-level="4">
+                    <div class="game-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="game-content">
+                        <h3>Puzzle Warna</h3>
+                        <p>Kenali warna-warna cerah dan cocokkan dengan objek yang tepat!</p>
+                        <div class="game-stats">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="difficulty">Sedang</span>
+                        </div>
+                    </div>
+                    <div class="game-status locked">
+                        <i class="fas fa-lock"></i>
+                        <span>Terkunci</span>
+                    </div>
+                </div>
+
+                <!-- Game 5: Belajar Jam -->
+                <div class="game-card" data-game="time" data-level="5">
+                    <div class="game-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="game-content">
+                        <h3>Belajar Jam</h3>
+                        <p>Pelajari cara membaca jam dan mengenal waktu dengan mudah!</p>
+                        <div class="game-stats">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="difficulty">Sulit</span>
+                        </div>
+                    </div>
+                    <div class="game-status locked">
+                        <i class="fas fa-lock"></i>
+                        <span>Terkunci</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievement Section -->
+        <section class="achievements-section">
+            <div class="section-header">
+                <h2>Pencapaianmu 🏆</h2>
+                <p>Lihat semua prestasi yang sudah kamu raih!</p>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card locked" data-achievement="first-star">
+                    <div class="achievement-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Bintang Pertama</h4>
+                        <p>Dapatkan bintang pertamamu</p>
+                    </div>
+                </div>
+                
+                <div class="achievement-card locked" data-achievement="game-master">
+                    <div class="achievement-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Master Game</h4>
+                        <p>Selesaikan semua game</p>
+                    </div>
+                </div>
+                
+                <div class="achievement-card locked" data-achievement="speed-learner">
+                    <div class="achievement-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Pembelajar Cepat</h4>
+                        <p>Selesaikan game dalam waktu singkat</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <h3>FunBrain Kids</h3>
+                    <p>Game edukasi terbaik untuk anak-anak cerdas!</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">
+                        <i class="fas fa-home"></i>
+                        <span>Beranda</span>
+                    </a>
+                    <a href="#" class="footer-link">
+                        <i class="fas fa-trophy"></i>
+                        <span>Prestasi</span>
+                    </a>
+                    <a href="#" class="footer-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Pengaturan</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="game-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="gameTitle">Game Title</h2>
+                <div class="modal-controls">
+                    <button id="pauseBtn" class="control-btn">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button id="closeBtn" class="control-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div id="gameContainer" class="game-container">
+                    <!-- Game content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Celebration Modal -->
+    <div id="celebrationModal" class="celebration-modal">
+        <div class="celebration-content">
+            <div class="celebration-animation">
+                <div class="confetti"></div>
+                <div class="celebration-star">⭐</div>
+            </div>
+            <h2>Selamat!</h2>
+            <p id="celebrationText">Kamu berhasil menyelesaikan game!</p>
+            <div class="celebration-stats">
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <span id="starsEarned">0</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-trophy"></i>
+                    <span id="levelUnlocked">Level 1</span>
+                </div>
+            </div>
+            <button id="nextGameBtn" class="celebration-btn">
+                <i class="fas fa-arrow-right"></i>
+                Game Selanjutnya
+            </button>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="successSound" preload="auto">
+        <source src="assets/sounds/success.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="clickSound" preload="auto">
+        <source src="assets/sounds/click.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="assets/sounds/background.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/audio.js"></script>
+    <script src="assets/js/games.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/enhanced-features.js"></script>
+    <script src="assets/js/enhanced-systems.js"></script>
+    <script src="assets/js/enhanced-systems.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGame - Platform Game Edukasi Interaktif</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EduGame</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#games" class="nav-link">Games</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Belajar Sambil Bermain</h1>
+                <p>Platform game edukasi interaktif yang dirancang untuk membuat pembelajaran menjadi menyenangkan dan efektif</p>
+                <button class="cta-button" onclick="scrollToGames()">
+                    <i class="fas fa-play"></i>
+                    Mulai Bermain
+                </button>
+            </div>
+            <div class="hero-image">
+                <div class="floating-icons">
+                    <i class="fas fa-calculator"></i>
+                    <i class="fas fa-book"></i>
+                    <i class="fas fa-globe"></i>
+                    <i class="fas fa-atom"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="games-section">
+            <div class="container">
+                <h2>Game Edukasi Interaktif</h2>
+                <p class="section-description">Pilih game edukasi yang sesuai dengan minat dan tingkat pembelajaran Anda</p>
+                
+                <div class="games-grid">
+                    <div class="game-card" onclick="openGame('math')">
+                        <div class="game-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Matematika Quiz</h3>
+                        <p>Uji kemampuan matematika dengan soal-soal yang menantang dan menyenangkan</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                            <span><i class="fas fa-users"></i> 1,234</span>
+                        </div>
+                    </div>
+
+                    <div class="game-card" onclick="openGame('memory')">
+                        <div class="game-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Memory Game</h3>
+                        <p>Latih daya ingat dan konsentrasi dengan permainan kartu yang menantang</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span><i class="fas fa-users"></i> 2,156</span>
+                        </div>
+                    </div>
+
+                    <div class="game-card" onclick="openGame('word')">
+                        <div class="game-icon">
+                            <i class="fas fa-spell-check"></i>
+                        </div>
+                        <h3>Word Challenge</h3>
+                        <p>Tingkatkan kosakata dan kemampuan berbahasa dengan game kata yang seru</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                            <span><i class="fas fa-users"></i> 987</span>
+                        </div>
+                    </div>
+
+                    <div class="game-card" onclick="openGame('science')">
+                        <div class="game-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Science Quiz</h3>
+                        <p>Jelajahi dunia sains dengan pertanyaan dan eksperimen virtual</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-star"></i> 4.6</span>
+                            <span><i class="fas fa-users"></i> 1,543</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Tentang EduGame</h2>
+                        <p>EduGame adalah platform pembelajaran interaktif yang menggabungkan teknologi modern dengan metode pembelajaran yang efektif. Kami percaya bahwa belajar harus menyenangkan dan mudah diakses oleh semua orang.</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Game interaktif yang mendidik</li>
+                            <li><i class="fas fa-check"></i> Tracking progress pembelajaran</li>
+                            <li><i class="fas fa-check"></i> Desain responsif dan user-friendly</li>
+                            <li><i class="fas fa-check"></i> Konten yang selalu diperbarui</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <h3>10K+</h3>
+                                <p>Pengguna Aktif</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>50+</h3>
+                                <p>Game Tersedia</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>98%</h3>
+                                <p>Tingkat Kepuasan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Hubungi Kami</h2>
+                <p>Punya pertanyaan atau saran? Jangan ragu untuk menghubungi kami!</p>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@edugame.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telepon</h4>
+                                <p>+62 21 1234 5678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Alamat</h4>
+                                <p>Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Nama Lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Pesan Anda" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>EduGame</span>
+                    </div>
+                    <p>Platform game edukasi terdepan untuk pembelajaran yang menyenangkan dan efektif.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#games">Games</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EduGame. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Game Modals -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="gameContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
